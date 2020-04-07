@@ -1,5 +1,5 @@
 
-## **claro-pr-ut(CLARO PR Unit Test Framework for NSO)**
+## **pdtf(Payload Driven Test Framework)**
 
 
 **Prerequisite:**
@@ -18,21 +18,21 @@ sudo ./installation.sh
 
 Please follow the below steps to do setup:
 
-1. Copy required json payloads w.r.t use-case in "claro-pr-ut/payloads/" directory 
+1. Copy required json payloads w.r.t use-case in "pdtf/payloads/" directory 
    
    **NOTE:**
    json payloads file names starts with priority number, so that dependencies will be taken care
 
 2. Generate test-cases and robot file for given json payloads using below command
     
-	    CBADDIGU-M-C119:claro-pr-ut cbaddigu$ pwd
-		/Users/cbaddigu/Downloads/claro-pr-ut
-		CBADDIGU-M-C119:claro-pr-ut cbaddigu$ python coreutils/testcasegeneratorutil.py
+	    CBADDIGU-M-C119:pdtf cbaddigu$ pwd
+		/Users/cbaddigu/Downloads/pdtf
+		CBADDIGU-M-C119:pdtf cbaddigu$ python coreutils/testcasegeneratorutil.py
 
 3. Modify input file w.r.t usecase
 
 		CBADDIGU-M-C119:payloads cbaddigu$ pwd
-		/Users/cbaddigu/Downloads/claro-pr-ut/payloads
+		/Users/cbaddigu/Downloads/pdtf/payloads
 		CBADDIGU-M-C119:payloads cbaddigu$ vim service_devices_mapping.py
 	
    Below are the details needs to be filled in service_devices_mapping.py
@@ -49,11 +49,11 @@ Please follow the below steps to do setup:
 
 Execute robot file to run test-cases using below command
 
-		CBADDIGU-M-C119:claro-pr-ut cbaddigu$ pwd
-		/Users/cbaddigu/Downloads/claro-pr-ut
-		CBADDIGU-M-C119:claro-pr-ut cbaddigu$ robot drivers/
+		CBADDIGU-M-C119:pdtf cbaddigu$ pwd
+		/Users/cbaddigu/Downloads/pdtf
+		CBADDIGU-M-C119:pdtf cbaddigu$ robot drivers/
 		__init__.py                     unit_test_cases_driver.robot
-		CBADDIGU-M-C119:claro-pr-ut cbaddigu$ robot drivers/unit_test_cases_driver.robot
+		CBADDIGU-M-C119:pdtf cbaddigu$ robot drivers/unit_test_cases_driver.robot
 
 **Report:**
 
