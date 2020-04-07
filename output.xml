@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190711 15:47:11.905" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/cbaddigu/Downloads/version10/npdt/drivers/sanity_test_cases_driver.robot" id="s1" name="Sanity Test Cases Driver">
+<test id="s1-t1" name="Validate">
+<kw name="test-case">
+<msg timestamp="20190711 15:47:11.942" level="FAIL">No keyword with name 'test-case' found.</msg>
+<status status="FAIL" endtime="20190711 15:47:11.942" starttime="20190711 15:47:11.942"></status>
+</kw>
+<status status="FAIL" endtime="20190711 15:47:11.942" critical="yes" starttime="20190711 15:47:11.940">No keyword with name 'test-case' found.</status>
+</test>
+<test id="s1-t2" name="Validate testcase- test-case">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python testcases/testcase-.py</arg>
+<arg>shell=True</arg>
+</arguments>
+<assign>
+<var>${testcase__result}</var>
+</assign>
+<msg timestamp="20190711 15:47:11.943" level="INFO">Starting process:
+python testcases/testcase-.py</msg>
+<msg timestamp="20190711 15:47:11.950" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190711 15:47:12.416" level="INFO">Process completed.</msg>
+<msg timestamp="20190711 15:47:12.417" level="INFO">${testcase__result} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:12.417" starttime="20190711 15:47:11.942"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="logs/testcase-.log"&gt;testcase-.log&lt;/a&gt;</arg>
+<arg>HTML</arg>
+</arguments>
+<msg timestamp="20190711 15:47:12.418" html="yes" level="INFO">&lt;a href="logs/testcase-.log"&gt;testcase-.log&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:12.418" starttime="20190711 15:47:12.418"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase__result.stdout}</arg>
+<arg>TESTCASE:PASSED for :testcase-</arg>
+</arguments>
+<msg timestamp="20190711 15:47:12.419" level="FAIL">'' does not contain 'TESTCASE:PASSED for :testcase-'</msg>
+<status status="FAIL" endtime="20190711 15:47:12.419" starttime="20190711 15:47:12.418"></status>
+</kw>
+<status status="FAIL" endtime="20190711 15:47:12.419" critical="yes" starttime="20190711 15:47:11.942">'' does not contain 'TESTCASE:PASSED for :testcase-'</status>
+</test>
+<test id="s1-t3" name="Validate testcase-1-add-vlan-to-router-aruba test-case">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python testcases/testcase-1-add-vlan-to-router-aruba.py</arg>
+<arg>shell=True</arg>
+</arguments>
+<assign>
+<var>${testcase_1_add_vlan_to_router_aruba_result}</var>
+</assign>
+<msg timestamp="20190711 15:47:12.420" level="INFO">Starting process:
+python testcases/testcase-1-add-vlan-to-router-aruba.py</msg>
+<msg timestamp="20190711 15:47:12.428" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190711 15:47:32.046" level="INFO">Process completed.</msg>
+<msg timestamp="20190711 15:47:32.046" level="INFO">${testcase_1_add_vlan_to_router_aruba_result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:32.046" starttime="20190711 15:47:12.420"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="logs/testcase-1-add-vlan-to-router-aruba.log"&gt;testcase-1-add-vlan-to-router-aruba.log&lt;/a&gt;</arg>
+<arg>HTML</arg>
+</arguments>
+<msg timestamp="20190711 15:47:32.047" html="yes" level="INFO">&lt;a href="logs/testcase-1-add-vlan-to-router-aruba.log"&gt;testcase-1-add-vlan-to-router-aruba.log&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:32.047" starttime="20190711 15:47:32.047"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_1_add_vlan_to_router_aruba_result.stdout}</arg>
+<arg>TESTCASE:PASSED for :testcase-1-add-vlan-to-router-aruba</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:32.048" starttime="20190711 15:47:32.047"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_1_add_vlan_to_router_aruba_result.stdout}</arg>
+<arg>TESTCASE:FAILED at Delete Flow for :testcase-1-add-vlan-to-router-aruba Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:32.049" starttime="20190711 15:47:32.048"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_1_add_vlan_to_router_aruba_result.stdout}</arg>
+<arg>TESTCASE:FAILED at Create Flow for :testcase-1-add-vlan-to-router-aruba Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:32.049" starttime="20190711 15:47:32.049"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_1_add_vlan_to_router_aruba_result.stdout}</arg>
+<arg>TESTCASE:FAILED at both Create &amp; Delete Flows for :testcase-1-add-vlan-to-router-aruba Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:32.050" starttime="20190711 15:47:32.049"></status>
+</kw>
+<status status="PASS" endtime="20190711 15:47:32.050" critical="yes" starttime="20190711 15:47:12.420"></status>
+</test>
+<test id="s1-t4" name="Validate testcase-2-add-vlan-to-router-tp test-case">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python testcases/testcase-2-add-vlan-to-router-tp.py</arg>
+<arg>shell=True</arg>
+</arguments>
+<assign>
+<var>${testcase_2_add_vlan_to_router_tp_result}</var>
+</assign>
+<msg timestamp="20190711 15:47:32.051" level="INFO">Starting process:
+python testcases/testcase-2-add-vlan-to-router-tp.py</msg>
+<msg timestamp="20190711 15:47:32.062" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20190711 15:47:47.783" level="INFO">Process completed.</msg>
+<msg timestamp="20190711 15:47:47.783" level="INFO">${testcase_2_add_vlan_to_router_tp_result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:47.783" starttime="20190711 15:47:32.051"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>&lt;a href="logs/testcase-2-add-vlan-to-router-tp.log"&gt;testcase-2-add-vlan-to-router-tp.log&lt;/a&gt;</arg>
+<arg>HTML</arg>
+</arguments>
+<msg timestamp="20190711 15:47:47.784" html="yes" level="INFO">&lt;a href="logs/testcase-2-add-vlan-to-router-tp.log"&gt;testcase-2-add-vlan-to-router-tp.log&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190711 15:47:47.784" starttime="20190711 15:47:47.784"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_2_add_vlan_to_router_tp_result.stdout}</arg>
+<arg>TESTCASE:PASSED for :testcase-2-add-vlan-to-router-tp</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:47.785" starttime="20190711 15:47:47.784"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_2_add_vlan_to_router_tp_result.stdout}</arg>
+<arg>TESTCASE:FAILED at Delete Flow for :testcase-2-add-vlan-to-router-tp Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:47.785" starttime="20190711 15:47:47.785"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_2_add_vlan_to_router_tp_result.stdout}</arg>
+<arg>TESTCASE:FAILED at Create Flow for :testcase-2-add-vlan-to-router-tp Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:47.786" starttime="20190711 15:47:47.786"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${testcase_2_add_vlan_to_router_tp_result.stdout}</arg>
+<arg>TESTCASE:FAILED at both Create &amp; Delete Flows for :testcase-2-add-vlan-to-router-tp Please Check the Logs for Details</arg>
+</arguments>
+<status status="PASS" endtime="20190711 15:47:47.787" starttime="20190711 15:47:47.786"></status>
+</kw>
+<status status="PASS" endtime="20190711 15:47:47.787" critical="yes" starttime="20190711 15:47:32.050"></status>
+</test>
+<doc>test usecases</doc>
+<status status="FAIL" endtime="20190711 15:47:47.788" starttime="20190711 15:47:11.907"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="2">Critical Tests</stat>
+<stat fail="2" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Sanity Test Cases Driver" pass="2">Sanity Test Cases Driver</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

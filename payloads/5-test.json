@@ -1,0 +1,39 @@
+{
+    "casb:casb": {
+      "services": {
+        "add-switch-cfs:add-switch": [
+          {
+            "device": "ios0",
+            "interface-type": "GigabitEthernet",
+            "interface-id": "1/1",
+            "service-type": "config-switchport",
+            "device-model": "ios-3650",
+            "config-switchport": {
+              "int-to-switch-description": "desc-to-config-switchport",
+              "allowed-vlan-ids": [
+                {
+                  "id": "1947"
+                },
+                {
+                  "id": "1948"
+                },
+                {
+                  "id": "1949"
+                }
+              ],
+              "native-vlan-id": "900"
+            },
+      	    "reference-data-config-switchport": {
+                                                    "load-interval": 30,
+                                                    "srr-queue-weight-1":1,
+                                                    "srr-queue-weight-2":22,
+                                                    "srr-queue-weight-3":33,
+                                                    "srr-queue-weight-4":44,
+                                                    "priority-queue":true
+                                                  }
+          }
+        ]
+      }
+    }
+}
+

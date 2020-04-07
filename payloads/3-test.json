@@ -1,0 +1,40 @@
+{
+    "casb:casb": {
+      "services": {
+        "add-switch-cfs:add-switch": [
+          {
+            "device": "ios0",
+            "interface-type": "Vlan",
+            "interface-id": 1947,
+            "service-type": "add-vlan-to-switch",
+            "device-model": "ios-3650",
+            "add-vlan-to-switch": {
+              "endpoint-type": "aruba-iap",
+              "stp-priority": "4096",
+              "aruba-iap": {
+                "user-vlan-id": "1948",
+                "wireless-vlan-id": "1949",
+                "int-trunk-data": "1/0/47",
+                "int-trunk-data-description": "gigabitEthernet1/0/47",
+                "int-trunk-voice": "1/0/48",
+                "int-trunk-voice-description": "gigabitEthernet1/0/48",
+                "int-trunk-downstream": "1/0/49",
+                "int-trunk-downstream-description": "gigabitEhternet1/0/49"
+              }
+            },
+            "reference-data-add-vlan-to-switch": {
+              "add-vlan-to-switch-iap-endpoint": {
+                "vlan-name-voice": "Voice_VLAN_",
+                "vlan-name-user": "User_VLAN_",
+                "vlan-name-wireless": "Wireless_VLAN_",
+                "class-map-voice": "match-any",
+                "class-map-data": "match-any",
+                "map-name-data-vlans": "DATA.VLANS",
+                "map-name-voice-vlans": "VOICE.VLANS"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
