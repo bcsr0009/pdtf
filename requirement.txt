@@ -1,0 +1,8 @@
+requests==2.18.4
+argparse
+simplejson
+paramiko==2.5.0
+datetime
+logging
+robotframework
+

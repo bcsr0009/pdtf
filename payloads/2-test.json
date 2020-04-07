@@ -1,0 +1,40 @@
+{
+    "casb:casb": {
+      "services": {
+        "add-switch-cfs:add-switch": [
+          {
+            "device": "ios0",
+            "interface-type": "GigabitEthernet",
+            "interface-id": "0/2.950",
+            "service-type": "add-vlan-to-router",
+            "device-model": "ios-3945",
+            "add-vlan-to-router": {
+              "endpoint-type": "cisco-vedio-endpoint",
+              "tp": {
+                "vlan-id": "960",
+                "ip-address": "1.1.1.1",
+                "netmask": "255.255.255.0",
+                "prefix-list": [
+                  {
+                    "prefix-list-name": "ce2pe-pl",
+                    "seq-no": "1",
+                    "ip-prefix": "1.1.1.0/24"
+                  },
+                  {
+                    "prefix-list-name": "local2bgp-pl",
+                    "seq-no": "1",
+                    "ip-prefix": "2.2.2.0/24"
+                  }
+                ]
+              }
+            },
+            "reference-data-add-vlan-to-router": {
+        	    "add-vlan-to-router-tp": {
+                                      		"directed-broadcast": true
+                                      	}
+	          }
+          }
+        ]
+      }
+    }
+  }

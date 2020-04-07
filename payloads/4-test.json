@@ -1,0 +1,40 @@
+{
+    "casb:casb": {
+      "services": {
+        "add-switch-cfs:add-switch": [
+          {
+            "device": "ios0",
+            "interface-type": "Vlan",
+            "interface-id": 970,
+            "service-type": "add-vlan-to-switch",
+            "device-model": "ios-3650",
+            "add-vlan-to-switch": {
+              "endpoint-type": "cisco-vedio-endpoint",
+              "stp-priority": "4096",
+              "tp": {
+                "interface": [
+                  {
+                    "tp-interface-type": "GigabitEthernet",
+                    "tp-interface-id": "1/0/47",
+                    "tp-interface-description": "gigEth1/0/47"
+                  },
+                  {
+                    "tp-interface-type": "GigabitEthernet",
+                    "tp-interface-id": "1/1/6",
+                    "tp-interface-description": "gigEht1/1/6"
+                  }
+                ]
+              }
+            },
+      	    "reference-data-add-vlan-to-switch": {
+          		"add-vlan-to-switch-video-endpoint" : {
+                                                			"class-map-name": "DATA.VLANS",
+                                                			"class-map-prematch": "match-any"
+                                                		}
+      	    }
+          }
+        ]
+	
+      }
+    }
+  }
